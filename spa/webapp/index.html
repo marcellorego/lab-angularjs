@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt">
+
+	<head>
+		<meta charset="utf-8">
+		<title>SPA AngularJS</title>
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript">
+			var customTags = ['ng-include', 'ng-pluralize', 'ng-view', 'ng-repeat']
+				.concat(["ng:include", "ng:pluralize", "ng:view"]);// Optionally these for CSS
+			for(var t=0, len=customTags.length;t<len;t++) 
+				document.createElement(customTags[t]);
+			if(!window.console) 
+				window.console = {}; 
+			window.console.log = function(msg) {};
+		</script>
+		<![endif]-->
+		
+		<style type="text/css" media="screen">
+  			@import url("css/libs/bootstrap/bootstrap.min.css"); 
+  			@import url("css/libs/bootstrap/bootstrap-responsive.min.css");
+			@import url("css/app/app.css");
+
+/* 			@import url(http://fonts.googleapis.com/css?family=Average+Sans); */
+/*   		@import url("http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.min.css">   */
+/*   		@import url("http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap-theme.min.css">   */
+		</style>
+		
+		<!-- 
+	    	Doc Angular.js :: ng-clock 
+	    	http://docs.angularjs.org/api/ng.directive:ngCloak
+	  	-->
+	  	<style type="text/css">
+	  	/* class defined here, becuse angular.js will be loaded later */
+	  		.ng-cloak {
+	    		display: none;
+	  		}
+	  	</style>
+  	</head>
+  	
+  	<body class="ng-cloak">
+
+ 		<div data-ng-include="'templates/topo.html'"></div>
+  	
+ 		<div data-ng-view></div> 		
+ 		
+		<!-- AngularJS resources -->
+  		<!-- http://code.angularjs.org/1.2.2/ -->
+<!--  		<script src="lib/angular/angular.min.js"></script> -->
+<!--  		<script src="lib/angular/angular-route.min.js"></script> -->
+<!--  		<script src="lib/angular/angular-resource.min.js"></script> -->
+		
+		<!-- Twitter resources -->
+<!--   		<script src="lib/bootstrap/bootstrap.min.js"></script> -->
+  		
+  		<!-- App resources -->
+<!-- 		<script src="js/main/module.js"></script> -->
+<!--   		<script src="js/services/auth.js"></script> -->
+<!-- 		<script src="js/controllers/logincontroller.js"></script> -->
+<!-- 		<script src="js/controllers/homecontroller.js"></script> -->
+<!-- 		<script src="js/main/routes.js"></script> -->
+<!-- 		<script src="js/main/start.js"></script> -->
+		
+		<script 
+    		data-main="js/require.config" 
+    		src="js/libs/require/require.min.js">
+			<!--   		src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js"> -->
+  		</script>
+		 		
+	</body>
+	
+</html>

@@ -1,0 +1,34 @@
+<style type="text/css" media="screen">
+	@import url("css/app/login.css");
+</style>
+
+
+<div class="boxLogin degradeCinza">
+
+	<div class="boxLoginTitulo">
+		<p class="boxLoginTxtTitulo">Login</p>
+	</div>
+	
+	<div class="boxLoginDivisor"></div>
+	
+	<form class="boxLoginForm" name="loginForm">
+		
+		<div class="container-fluid">
+			<div >
+				Chave: <input type="text" data-ng-model="usuario.chave" value="{{usuario.chave}}" placeholder="Informe sua chave">
+			</div>
+			<div>
+				Senha: <input type="password" data-ng-model="usuario.senha" value="{{usuario.senha}}" placeholder="Informe sua senha">
+			</div>
+		</div>
+		
+		<div class="boxLoginDivisor"></div>
+	
+		<div class="boxLoginRodape">
+			<button class="btn btn-primary" data-ng-click="loginClick()">Login</button>
+			<button class="btn btn-danger" data-ng-click="cancelarClick()">Cancelar</button>
+		</div>
+		
+	</form>
+		
+</div>

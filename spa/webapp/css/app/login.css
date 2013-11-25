@@ -1,0 +1,56 @@
+.boxLogin {
+	width: 340;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;
+	border-radius: 5px;
+	border-width: 1px;
+  	border-color: #5c5c5c;
+  	
+	-moz-box-shadow:    0 0 15px #5c5c5c;
+	-webkit-box-shadow: 0 0 15px #5c5c5c;
+	box-shadow:         0 0 15px #5c5c5c;
+	
+}
+
+.boxLoginTitulo {
+	width: 100%;
+	height: 40px;
+}
+
+.boxLoginTxtTitulo {
+	top: 10px;
+	left: 10px;
+	position: absolute;
+	font-family: 'Average Sans', sans-serif;
+	font-weight: bold;
+	color: #182d46;
+}
+
+.boxLoginFormItem {
+	
+	width: 320px;
+	margin-left: 10px;
+		
+}
+
+.boxLoginDivisor {
+	width: 320px;
+	margin-left: 10px;
+	height: 1px;
+	background-color: #b0b0b0;
+}
+
+.boxLoginForm {
+	margin-top: 20px;
+	height: 90px;
+}
+
+.boxLoginRodape {
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 8px;
+}

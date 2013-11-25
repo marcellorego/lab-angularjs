@@ -1,0 +1,5 @@
+[
+	{chave: 'admin', senha: 'admin', loginValido: 'false'},
+	{chave: 'user1', senha: 'user1', loginValido: 'false'},
+	{chave: 'user2', senha: 'user2', loginValido: 'false'}
+]
