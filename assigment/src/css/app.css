@@ -1,0 +1,17 @@
+body {
+    padding-top: 120px;
+}
+
+.content {
+    background-color: #F2F2F2;
+
+}
+
+.logo {
+    height: 80px;
+}
+
+.nav-list > li > a {
+    color: #0088cc;
+    text-decoration: none;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <meta HTTP-EQUIV="X-UA-COMPATIBLE" CONTENT="IE=EmulateIE9" >
+    <meta charset="utf-8">
+    <script type="text/javascript" src="scripts/d3.min.js"></script>
+    <script type="text/javascript" src="scripts/radialProgress.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+
+    <style>
+
+    .path--background {
+        fill: none;
+        stroke: #efefef;
+        stroke-width: 1px;
+    }
+    
+    .path--foreground {
+        fill: #0000ff;
+        
+    }
+
+    .label {
+        font: 20px sans-serif;
+        text-anchor: middle;
+    }
+
+    </style>
+<body>
+
+  <div id="area">
+  </div>
+  
+  <button onclick="myFunction()">Click me</button>
+
+  
+<script>
+
+var width = 50,
+    height = 50;
+
+var seconds = [{
+    value: 60, 
+    size: 60, 
+    label: "", 
+    update: function(value) { 
+        return value; 
+    }
+}];
+
+var arc = d3.svg.arc()
+    .innerRadius(width / 2 - 10)
+    .outerRadius(width / 2 - 5)
+    .startAngle(0)
+    .endAngle(function(d) { return (d.value / d.size) * 2 * Math.PI; });
+
+var svg = d3.select("#area").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var field = svg.selectAll(".field")
+    .data(seconds)
+    .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(" + (i * 2 + 1) / 2 * width + "," + height / 2 + ")"; })
+    .attr("class", "field");
+
+field.append("path")
+    .attr("class", "path path--background")
+    .attr("d", arc);
+
+var path = field.append("path")
+    .attr("class", "path path--foreground");
+
+var label = field.append("text")
+    .attr("class", "label")
+    .attr("dy", ".35em");
+
+function arcTween(b) {
+  var i = d3.interpolate({value: b.previous}, b);
+  return function(t) {
+    return arc(i(t));
+  };
+}
+
+var update = function update(value) {
+  
+
+  field
+      .each(function(d) { d.previous = d.value, d.value = d.update(value); });
+
+  path.transition()
+      .ease("elastic")
+      .duration(750)
+      .attrTween("d", arcTween);
+
+  label
+      .text(function(d) { return d.value + d.label; });
+
+  //setTimeout(update, 1000 - (now % 1000));
+};
+
+function myFunction() {
+    var now = new Date();
+    update(now.getSeconds());
+}
+
+</script>
+
+  
+
+</body>
+</html>
