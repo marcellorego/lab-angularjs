@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Resizer</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link href="style.css" rel="stylesheet" />
+    <script data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular.js" data-require="angular.js@1.2.x"></script>
+    <script src="app.js"></script>
+    <script src="resizer.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+
+  	<div id="topnav">Top navbar
+        <button data-ng-click="divide()">New</button>          
+    </div>
+    
+    <div id="workspace">
+      <div id="sidebar">
+        <h3>Side navbar</h3>
+      </div>
+    
+      <div id="content">
+        
+      </div>
+    
+      <div id="sidebar-resizer"
+        class="resizer" 
+        resizer="vertical"
+        resizer-left="#sidebar" 
+        resizer-right="#content"
+        resizer-max="0"
+        resizer-min="0">
+        <span>||</span>
+      </div>
+    </div>  	
+
+  </body>
+
+</html>

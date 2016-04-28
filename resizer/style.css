@@ -1,0 +1,71 @@
+#topnav {
+    background-color: #333333;
+    display: block;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #DDD;
+}
+
+
+#workspace {
+    position: absolute;
+    top: 35px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#sidebar {
+	background-color: #EEE;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    overflow: auto;
+}
+#content {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 206px; /* 200 + 6*/
+    right: 0px;
+    overflow: auto;
+    color: #FFF;
+    
+}
+
+#sidebar-resizer {
+	left: 200px;
+}
+
+/** RESIZER **/
+.resizer {
+    background-color: #666;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    width: 6px;
+    cursor: e-resize;
+}
+
+.resizer:hover {
+    background-color: #AAA;
+}
+
+.resizer span {
+    color: #FFFFFF;
+    text-align: center;
+    border-width: 0 1px;
+    top: 50%;
+    height: 25px;
+    width: 6px;
+    position: absolute;
+    display: block;
+    /*border: 1px solid #ccc;*/
+    background-color: #444;
+    cursor: pointer;
+}
