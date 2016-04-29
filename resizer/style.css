@@ -6,7 +6,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    background-color: #DDD;
+    background-color: #AAA;
 }
 
 
@@ -19,7 +19,7 @@
 }
 
 #sidebar {
-	background-color: #EEE;
+	background-color: #DDD;
     position: absolute;
     top: 0px;
     bottom: 0;
@@ -27,19 +27,43 @@
     width: 200px;
     overflow: auto;
 }
+
 #content {
+    background-color: #FFF;
     position: absolute;
     top: 0px;
     bottom: 0;
     left: 206px; /* 200 + 6*/
     right: 0px;
-    overflow: auto;
-    color: #FFF;
-    
+    overflow: auto;    
+}
+
+#content1 {
+    background-color: #FF0000;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0px; /* 200 + 6*/
+    right: 200px;
+    overflow: auto;    
+}
+
+#content2 {
+    background-color: #FFFF00;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 200px; /* 200 + 6*/
+    right: 0px;
+    overflow: auto;    
 }
 
 #sidebar-resizer {
 	left: 200px;
+}
+
+#sidebar-resizer1 {
+	left: 500px;
 }
 
 /** RESIZER **/
