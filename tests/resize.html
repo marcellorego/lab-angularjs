@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Resize event</title>
+    <!--script>
+      document.write('<base href="' + document.location + '" />');
+    </script-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/angular.treeview.css">
+    <script type="text/javascript" src="libs/angular.min.js"></script>
+  </head>
+  <body ng-app="resizeApp" ng-controller="resizeCtrl as vm">
+
+      <div on-resize="vm.executeResize($event)" class="flex">
+        {{vm.widthChanged}}, {{vm.heightChanged}}
+      </div>    
+
+    <script src="resize/resize.js"></script>
+    <script src="resize/resizeDirective.js"></script>
+  </body>
+</html>

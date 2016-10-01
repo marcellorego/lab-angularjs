@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Parent x Child relation</title>
+    <!--script>
+      document.write('<base href="' + document.location + '" />');
+    </script-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="libs/angular.min.js"></script>
+  </head>
+  <body ng-app="scopeApp">
+    
+    <outter>
+      <inner label="ctrl" data="$parent.o.data" color="green">
+      </inner>
+      <inner label="scope" data="$parent.data" color="red">
+      </inner>
+    </outter>
+
+    <parent label="Parent">
+      <child label="child1" obj="$parent.ctrl$Parent.obj"></child>
+      <child label="child2" change="ctrl$Parent.change"></child>
+      <child label="child3" change="ctrl$Parent.change"></child>
+    </parent>
+
+    <script src="scope/scope.js"></script>
+    <script src="scope/parent.js"></script>
+    <script src="scope/child.js"></script>
+    <script src="scope/relatives.js"></script>
+  
+  </body>
+</html>
